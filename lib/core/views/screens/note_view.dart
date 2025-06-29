@@ -12,7 +12,6 @@ static String id ='note view';
       child:  Scaffold(
         floatingActionButton: FloatingActionButton(
           onPressed:(){
-            
             showModalBottomSheet(context: context, builder:(context){
               return AddNote();
             },

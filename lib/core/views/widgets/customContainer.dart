@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 class CustomContainer extends StatelessWidget {
-  const CustomContainer({super.key});
-
+  const CustomContainer({super.key, this.onTap});
+final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap:(){} ,
+      onTap:onTap ,
       child: Container(
         width:double.infinity ,
         height:50 ,
