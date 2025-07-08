@@ -3,14 +3,16 @@ import 'package:flutter/material.dart';
 import '../../constant.dart';
 
 class CustomTextFild extends StatelessWidget {
-  const CustomTextFild({super.key,required this.hint,required this.maxLines,this.onSaved});
+  const CustomTextFild({super.key,required this.hint,required this.maxLines,this.onSaved,this.onChanged});
 final String hint;
 final int maxLines;
 final Function(String?)? onSaved;
+final void Function(String)? onChanged;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       onSaved:onSaved ,
+      onChanged:onChanged ,
       validator:(data){
         if(data?.isEmpty?? true){
           return 'this field is impty';
